@@ -1,4 +1,3 @@
-'user strict';
 
 var mysql = require('mysql');
 
@@ -14,11 +13,11 @@ var connection = mysql.createConnection({
     database : 'savemoneydb'
 });
 
-connection.connect(function(err) {
-    if (err) throw err;
-    else{
-        console.log("connect")
-    }
-});
+// connection.connect(function(err) {
+//     if (err) throw err;
+//     else{
+//         console.log("connect")
+//     }
+// });
 
 module.exports = connection;
