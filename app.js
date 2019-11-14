@@ -19,6 +19,9 @@ app.use('/movie', MovieRoute);
 app.use('/login', LoginRoute);
 app.use('/registration', RegistrationRoute);
 
+app.use('/', (req,res)=>{
+    res.send({msg:"done"})
+});
 
 app.use((req, res, next) => {
     const error = new Error('page not found');
@@ -38,8 +41,8 @@ app.use((error, req, res, next) => {
 
 
 
-app.listen("3000", () => {
+app.listen(port, () => {
 
-    console.log("server start on posrt 3000");
+console.log(`server start on posrt ${port}`);
 });
 
