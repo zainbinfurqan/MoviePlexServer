@@ -8,9 +8,9 @@ var connection = mysql.createConnection({
     // password : '',
     // database : 'movieplexdb'
     host : 'db4free.net',
-    user     : 'zainahmed',
+    user     : 'rabiakhan',
     password : 'pakistan@123',
-    database : 'savemoneydb'
+    database : 'movieplexdb'
 });
 
 // connection.connect(function(err) {
