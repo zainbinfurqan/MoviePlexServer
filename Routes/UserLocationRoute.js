@@ -4,7 +4,7 @@ const router = express.Router();
 const UserLocationController = require('../Controller/UserLocationController')
 
 
-router.get('/',UserLocationController.SaveUserLocation);
+router.post('/',UserLocationController.SaveUserLocation);
 
 
 module.exports = router;
