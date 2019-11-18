@@ -19,9 +19,9 @@ app.use('/movie', MovieRoute);
 app.use('/login', LoginRoute);
 app.use('/registration', RegistrationRoute);
 app.use('/userlocation',UserLocationRoute)
-app.use('/', (req,res)=>{
-    res.send({msg:"done"})
-});
+// app.use('/', (req,res)=>{
+//     res.send({msg:"done"})
+// });
 
 app.use((req, res, next) => {
     const error = new Error('page not found');
