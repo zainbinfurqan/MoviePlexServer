@@ -18,7 +18,7 @@ app.use('/cenima', CenimaRoute);
 app.use('/movie', MovieRoute);
 app.use('/login', LoginRoute);
 app.use('/registration', RegistrationRoute);
-app.use('./userlocation',UserLocationRoute)
+app.use('/userlocation',UserLocationRoute)
 app.use('/', (req,res)=>{
     res.send({msg:"done"})
 });
