@@ -2,7 +2,7 @@ db = require('../Connection/Connection');
 
 
 exports.SaveUserLocation = async (req, res) => {
-
-    await res.send("userLocation")
+    console.log(req.body)
+     res.send({msg:'userlocation'})
 }
 
