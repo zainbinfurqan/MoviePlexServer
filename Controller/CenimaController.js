@@ -20,7 +20,7 @@ exports.getAllCenima = async (req, res) => {
                         });
                     } else {
                         console.log("result")
-                        await res.send(result)
+                         res.send(result)
                     }
                     console.log('Transaction Complete.');
                 });
