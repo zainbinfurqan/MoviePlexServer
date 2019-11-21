@@ -21,7 +21,7 @@ exports.SaveUserLocation = async (req, res) => {
                     });
                 } else {
                     // console.log("result")
-                    await res.send({ msg: 'done' })
+                     res.send({ msg: 'done' })
                 }
                 console.log('Transaction Complete.');
             });
