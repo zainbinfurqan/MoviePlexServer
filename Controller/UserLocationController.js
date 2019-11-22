@@ -1,13 +1,14 @@
 db = require('../Connection/Connection');
-
+const moment = require('moment')
 
 exports.SaveUserLocation = async (req, res) => {
-    console.log(req.body.latitude)
+    // console.log(req)
     //  res.send({msg:'userlocation'})
     await db.beginTransaction(function (err) {
         if (err) { throw err; }
-
-        db.query(`INSERT INTO userlocation(Longitude, Latitude) VALUES ('${req.body.longitude}','${req.body.latitude}')`, (err, result) => {
+        let currentData = moment().format('YYYY-MM-DD HH-MM');
+        db.query(`INSERT INTO userlocation(userIP,Longitude, Latitude,Time) VALUES 
+        ('${req.body.ipAddress}','${req.body.longitude}','${req.body.latitude}','${currentData}')`, (err, result) => {
             if (err) {
                 db.rollback(function () {
                     throw err;
@@ -21,7 +22,7 @@ exports.SaveUserLocation = async (req, res) => {
                     });
                 } else {
                     // console.log("result")
-                     res.send(req.body)
+                    res.send({ msg: 'done' })
                 }
                 console.log('Transaction Complete.');
             });
